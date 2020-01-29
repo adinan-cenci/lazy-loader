@@ -1,0 +1,8 @@
+
+img.lazy-loading.is-loading, 
+iframe.lazy-loading.is-loading {
+	background-image: url(../image/loading.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: white;
+}

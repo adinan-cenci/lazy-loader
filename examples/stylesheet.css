@@ -1,0 +1,42 @@
+body {
+    margin: 0px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Roboto', 'Arial';
+    color: white;
+    background-color: #333;
+}
+
+p {
+    margin: 0px auto 50px auto;
+}
+
+p:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.container {
+    width: 960px;
+    max-width: 100%;
+    margin: 0px auto;
+}
+
+.card {
+    width: 300px;
+    padding: 10px;
+    border: solid 1px white;
+    margin: 0px 10px 10px 0px;
+    float: left;
+}
+
+    .card .thumbnail {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+        .card .thumbnail img {
+            width: 100%;
+            min-height: 100px;
+        }
