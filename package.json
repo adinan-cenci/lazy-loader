@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adinan-cenci/js-lazy-loader.git"
+    "url": "git+https://github.com/adinan-cenci/lazy-loader.git"
   },
   "keywords": ["lazy", "loader"],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adinan-cenci/js-lazy-loader/issues"
+    "url": "https://github.com/adinan-cenci/lazy-loader/issues"
   },
-  "homepage": "https://github.com/adinan-cenci/js-lazy-loader#readme",
+  "homepage": "https://github.com/adinan-cenci/lazy-loader#readme",
   "devDependencies": {
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.6"
