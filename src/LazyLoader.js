@@ -4,11 +4,28 @@ class LazyLoader
 {
     constructor() 
     {
-        this.loaders = [];
-        this.throtle = null;
+        this.loaders    = [];
+        this.throtle    = null;
+        this.observer   = null;
 
+        this.instantiateLoaders();
+        this.setUpObserver();
+        
         window.addEventListener('scroll', this.scroll.bind(this));
         this.scroll();
+    }
+
+    setUpObserver() 
+    {
+        var config = { 
+            attributes  : false, 
+            childList   : true, 
+            subtree     : true 
+        };
+
+        this.observer = new MutationObserver(this.instantiateLoaders.bind(this));
+
+        this.observer.observe(document.body, config);
     }
 
     scroll() 
@@ -19,10 +36,9 @@ class LazyLoader
 
         this.throtle = setTimeout( () => 
         { 
-            this.throtle = null; 
-        }, 100);
+            this.throtle = null;
 
-        this.instantiateLoaders();
+        }, 100);
 
         for (var l of this.loaders) {
             l.scroll();

@@ -32,12 +32,13 @@ class ElementLoader
 
         this.beforeLoading().then( async () => 
         {
-            this.loaded     = true;
-            this.inProgress = false;
             return this.load();
 
         }).then( async () => 
         {
+            
+            this.inProgress = false;
+            this.loaded     = true;
             this.afterLoading();
 
         });
